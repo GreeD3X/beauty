@@ -26,6 +26,10 @@ public:
         set(name, value);
     }
 
+    void insert_header(beast::http::field name, const std::string& value) {
+        insert(name, value);
+    }
+
     bool is_postponed() const { return _is_postponed; }
     void postpone() { _is_postponed = true; }
 
